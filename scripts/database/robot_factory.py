@@ -1,4 +1,4 @@
-class IdentificationFactory:
+class RobotFactory:
     def __init__(self, identification_type):
         self.identification_type = identification_type
 
