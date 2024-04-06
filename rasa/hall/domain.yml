@@ -1,0 +1,119 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - appreciation
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - go_to
+  - user_follow_robot
+  - user_stay
+  - user_wants_drink
+  - user_ask_robot_to_follow
+  - user_ask_robot_to_stay
+  - action_completed_story
+  - utter_message
+  - drink_preference
+  - ask_for_venue_availability
+
+  
+entities:
+  - location
+  - drink
+
+slots:
+  location:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: location
+  drink:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: drink
+
+responses:
+  utter_greet:
+  - text: "Hello there! How are you doing?"
+
+  utter_cheer_up:
+  - text: "Here's a bit of something to cheer you up:"
+
+  utter_did_that_help:
+  - text: "Did that sort you out?"
+
+  utter_happy:
+  - text: "Brilliant, carry on then!"
+
+  utter_goodbye:
+  - text: "Cheerio!"
+    
+  utter_cheers:
+  - text: "Cheers!"
+    
+  utter_iamabot:
+  - text: "I'm a bot with British accent, mate."
+
+  utter_go:
+  - text: "Right, off to {location} I go then."
+
+  utter_follow_user:
+  - text: "Sure, I can toddle along behind you."
+
+  utter_not_follow_user:
+  - text: "Alright, I'll stay put then."
+
+  utter_ask_follow:
+  - text: "Fancy if I tag along?"
+    
+  utter_123:
+  - text: "One, two, three!"
+
+  action_offer_tea:
+  # - text: "Hello! Fancy a brew?"
+    - text: "Hello! Fancy a cuppa?"
+      
+  action_completed:
+  - text: "I've completed the task."
+
+  utter_message:
+  - text: "A Nice cuppa for you! Enjoy!"
+    
+  utter_ask_drink_preference:
+  - text: "What beverage would you fancy?"
+  
+  utter_confirm_drink_preference:
+  - text: "Absolutely, I can fetch you a {drink}. Just a moment, I'll return shortly with your beverage."
+
+  utter_offer_tea:
+  - text: "Certainly, I can get you a cup of tea. Do bear with me, I'll be back shortly with your drink."
+
+  utter_check_venue_availability:
+  - text: "Allow me to check that for you. Just a moment, please."
+    
+actions:
+  - action_go_to
+  - action_follow
+  - action_do_not_follow
+  - action_offer_tea
+  - action_ask_follow_to_pantry
+  - action_greet_user
+  - action_lead_to_pantry
+  - action_stay_and_prepare_drink
+  - action_completed
+  - utter_message
+  - utter_123
+  - utter_ask_drink_preference
+  - utter_confirm_drink_preference
+  - utter_offer_tea
+  - action_offer_drink
+  - action_welcome_message
+  - 
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
