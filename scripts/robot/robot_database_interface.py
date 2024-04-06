@@ -1,8 +1,8 @@
 # Import the necessary classes and constants
-from .database_connection import get_connection
+from ..database.database_connection import get_connection
 
 from .robot_factory import RobotFactory
-from .pg_config import DB_CONFIG
+from ..database.pg_config import DB_CONFIG
 
 import psycopg2
 
