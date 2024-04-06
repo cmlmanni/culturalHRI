@@ -1,15 +1,11 @@
 # Import the necessary classes and constants
-from .database_factory import DatabaseConnectionFactory
 from .database_connection import get_connection
 
-from .identification_factory import IdentificationFactory
-from .config import DB_CONFIG
+from .robot_factory import RobotFactory
+from .pg_config import DB_CONFIG
 
 import psycopg2
-import logging
 
-
-logging.basicConfig(filename='database.log', level=logging.INFO, format='%(asctime)s %(message)s')
 # Robot numbers
 # Map national culture background preferences to robot numbers
 ROBOT_NUMBERS = {
@@ -26,8 +22,8 @@ DEFAULT = "GB" # Default robot
 
 # Function to get an identification
 def get_identification():
-    # Create an IdentificationFactory for nationality
-    factory = IdentificationFactory('nationality')
+    # Create an RobotFactory for nationality
+    factory = RobotFactory('nationality')
     # Use the factory to get an identification
     return factory.get_identification()
 
