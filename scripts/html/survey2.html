@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Human-Robot Interaction: Exploring Proximity Preferences and Cultural
+          Influences</title>
+    <!-- bootstrap 4.52 -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="/submit_survey2" method="POST">
+        <div class="form-group">
+          <h1>Post-experiment Survey</h1>
+        </div>
+
+        <div class="form-group">
+          <h4>1. Which robot do you like?</h4>
+          <div class="form-check">
+            <input type="radio" id="firstRobot" name="robot" value="first" class="form-check-input" required/>
+            <label for="firstRobot" class="form-check-label">The First one</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="secondRobot" name="robot" value="second" class="form-check-input" required/>
+            <label for="secondRobot" class="form-check-label">The Second one</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <h4>2. Please provide more details on why you gave the answer in the previous question.</h4>
+          <textarea id="q1reason" name="q1reason" class="form-control" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <h4>3. Which Aspects of the Robot's Behaviour Did You Like?</h4>
+          <div class="form-check">
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              id="conversation-language"
+              name="aspect"
+              value="conversation-language"
+              class="form-check-input"
+            />
+            <label for="conversation-language" class="form-check-label"
+              >Conversation Language</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              id="proximity"
+              name="aspect"
+              value="proximity"
+              class="form-check-input"
+            />
+            <label for="proximity" class="form-check-label">Proximity</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              id="other"
+              name="aspect"
+              value="other"
+              class="form-check-input"
+            />
+            <label for="other" class="form-check-label">Other (Please Specify)</label>
+        </div>
+        <div class="form-group">
+          <textarea
+            id="other-aspect"
+            name="other-aspect"
+            class="form-control"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <h4>4. Please provide more details on why you gave the robot the rating you did in the previous question.</h4>
+          <textarea
+            id="q3reason"
+            name="q3reason"
+            class="form-control"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <h4>5. How would you rate the robot's performance?</h4>
+          <div class="form-check">
+            <input
+              type="radio"
+              id="excellent"
+              name="performance"
+              value="excellent"
+              class="form-check-input"
+              required
+            />
+            <label for="excellent" class="form-check-label">Excellent</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              id="good"
+              name="performance"
+              value="good"
+              class="form-check-input"
+            />
+            <label for="good" class="form-check-label">Good</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              id="average"
+              name="performance"
+              value="average"
+              class="form-check-input"
+            />
+            <label for="average" class="form-check-label">Average</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              id="poor"
+              name="performance"
+              value="poor"
+              class="form-check-input"
+            />
+            <label for="poor" class="form-check-label">Poor</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              id="verypoor"
+              name="performance"
+              value="verypoor"
+              class="form-check-input"
+            />
+            <label for="verypoor" class="form-check-label">Very Poor</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <h4>6. Please provide more details on why you gave the robot the rating you did in the previous question.</h4>
+          <textarea
+            id="q3reason"
+            name="q3reason"
+            class="form-control"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <h4>7. Are there specific behaviours or features you would like to see improved or added?</h4>
+          <textarea
+            id="suggestions"
+            name="suggestions"
+            class="form-control"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Submit" class="btn btn-primary" />
+        </div>
+      </form>
+    </div>
+    <!-- bootstrap 4.52 -->
+    <script src="/css/bootstrap.min.js"></script>
+
+    <script src="/js/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("form").submit(function (e) {
+          if ($("input[name='aspect']:checked").length == 0) {
+            e.preventDefault();
+            alert(
+              "Please select at least one aspect of the robot's behaviour that you liked."
+            );
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

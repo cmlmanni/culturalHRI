@@ -1,0 +1,17 @@
+body {
+    padding: 20px;
+}
+
+form {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
