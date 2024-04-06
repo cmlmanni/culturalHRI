@@ -1,0 +1,213 @@
+version: "3.1"
+
+nlu:
+- intent: start
+  examples: |
+    - start  
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - ya
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: appreciation
+  examples: |
+    - thanks
+    - thank you
+    - thank you very much
+    - thanks a lot
+    - thank you so much
+    - thank you loads
+    - thanks a bunch
+    - thank you heaps
+    - thanks a million
+    - thank you a ton
+
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you British?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+   
+- intent: go_to
+  examples: |
+    - go to [entrance](location)
+    - go to [pantry](location)
+    - I would like you to go to the [dinning room](location)
+    - Can you go to the [lounge](location), please?
+    - Could you go to the [conference room](location)?
+    - Please go to the [reception](location)
+    - I need you in the [meeting room](location)
+    - Can you move to the [break room](location)?
+    - Please head to the [manager's office](location)
+    - Can you go to the [workstation area](location)?
+    - Please move to the [parking lot](location)
+    - I want you to go to the [restroom](location)
+    - Can you head to the [server room](location)?
+    - Please go to the [kitchen](location)
+    - Can you go to the [rooftop](location)?
+    - Please go to the [garden](location)
+
+- intent: drink_preference
+  examples: |
+    - Can I have a [coffee](drink)?
+    - I would like a [tea](drink), please.
+    - Could I get a [beer](drink)?
+    - I'll have a [wine](drink).
+    - May I have a [soda](drink)?
+    - I want to order a [juice](drink).
+    - Can I get a [water](drink), please?
+    - I'd like to order a [milkshake](drink).
+    - Can I have a [smoothie](drink)?
+    - I'll take a [cocktail](drink), please.
+    - Could I order a [whiskey](drink)?
+    - I'd like a [vodka](drink), please.
+    - Can I get a [rum](drink)?
+    - I want a [gin](drink).
+    - May I have a [champagne](drink)?
+    
+- intent: user_ask_robot_to_follow
+  examples: | 
+    - can you follow me?
+    - follow me
+    - follow me please
+    - can you follow me please?
+    - can you follow me, please?
+    - can you follow me, please
+    - can you follow me
+    - follow me, please
+    - follow me please
+    - please follow me
+
+- intent: user_ask_robot_to_stay
+  examples: |
+    - can you stay here?
+    - stay here
+    - stay here please
+    - can you stay here please?
+    - can you stay here, please?
+    - can you stay here, please
+    - can you stay here
+    - stay here, please
+    - stay here please
+    - please stay here
+    - do not follow me
+    - do not follow me please
+    - do not follow me, please
+    - 
+- intent: ask_for_venue_availability
+  examples: |
+    - Is the meeting [room](location) available?
+    - Can I book the [conference room](location)?
+    - Who is in the [game room](location)?
+    - When is the [gym(location)] free?
+
+- intent: user_wants_drink
+  examples: |
+    - I would like a drink
+    - Can I have a drink?
+    - I'm thirsty
+    - Do you have any drinks?
+    - Yes please, I would like a drink
+    - I would like a drink, please
+    - Yes please
+    - I'm thirsty, can I have a drink?
+    - A drink would be nice
+
+- intent: user_follow_robot
+  examples: |
+    - I'll follow you
+    - Let's go to the pantry
+    - I'll come with you
+
+- intent: user_stay
+  examples: |
+    - I'll stay here
+    - I prefer to stay
+    - I don't want to move
+
+- intent: action_completed_story
+  examples: |
+    - Action completed: A Nice cuppa for you! Enjoy!
+    - Action completed: Task done!
+    - Action completed: Job finished!
