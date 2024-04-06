@@ -19,7 +19,7 @@ import sys
 
 from sensor_msgs.msg import LaserScan, Image
 
-from ..database.robot_database_interface import get_robot_number
+from ..robot.robot_database_interface import get_robot_number
 
 class Engagement:
     def __init__(self, node_name="pyhri_test", reference_frame="sellion_link"):
