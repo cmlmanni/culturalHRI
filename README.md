@@ -18,8 +18,8 @@ Please ensure that your system meets these requirements before you continue.
 This software requires the following dependencies:
 
 - [ROS Noetic](https://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment)
-- PostgreSQL
-- Node.js
+- [PostgreSQL](https://www.postgresql.org/download/linux/ubuntu/)
+- [Node.js](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
 - python3-websockets
 - python3-opencv
 - ros-noetic-cv-bridge
@@ -51,6 +51,8 @@ pip3 install officebots
 ```
 
 For python packages, you may also run `pip install -r requirements.txt` to install required python dependencies.
+
+This framework requires [OfficeBots](https://blog.pal-robotics.com/ros4hri-standardising-an-interface-for-human-robot-interaction/) to run. A modifed version of the OfficeBots game is included in this repository. If you would like to modify the game to suit your expeiment, please install [GoDot 3](https://godotengine.org/download/preview/) and [download](https://github.com/severin-lemaignan/officebots/releases/tag/ros4hri-iros22-tutorial) the OfficeBots binary from its Github Releases page.
 
 ## Project Structure
 
