@@ -1,4 +1,6 @@
-# Culturally Aware HRI Framework: A framework to examine the importance of cultures in Human-Robot Interactions
+# CulturalHRI: A framework to examine the importance of cultures in Human-Robot Interactions
+
+![Diagram](doc/img/robot.png)
 
 ## Project Overview
 
