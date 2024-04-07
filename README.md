@@ -133,13 +133,21 @@ The `scripts` directory contains various Python and JavaScript scripts utilized 
 
 ## Usage
 
-To utilize the CulturalBot Framework or replicate the research findings:
+To utilize the CulturalHRI Framework or replicate the research findings:
 
 1. Clone the repository
 2. Install dependencies
 3. Explore and modify the codebase as needed.
 4. Run simulations, experiments, or tests using the provided scripts.
 5. Document any changes or additions made to the project.
+
+To run the software packages, first start the [OfficeBots](https://github.com/severin-lemaignan/officebots) game, and then run the following commands in seperate terminals:
+`roscore`
+`python3 -m scripts.robot.robot`
+`python3 -m scripts.robot.rasa_ros_bridge`
+`python3 -m scripts.robot.officebots_ros [Robot Name]`
+
+If you need further assistance on how to interact with the robot, please refer to the [OfficeBots GitHub Page](https://github.com/severin-lemaignan/officebots).
 
 ## Contributing
 
