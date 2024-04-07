@@ -2,14 +2,61 @@
 
 ## Project Overview
 
-This framework is a research-based software engineering project aimed at exploring culturally adaptive human-robot interaction (HRI) within diverse office environments. The project focuses on simulating and studying greeting behaviors of robotic agents in multiethnic workplaces, utilizing the ROS4HRI framework and the OfficeBots simulation environment.
+This CulturalHRI framework is a research-based software engineering project aimed at exploring culturally adaptive human-robot interaction (HRI) within diverse office environments. The project focuses on simulating and studying greeting behaviours of robotic agents in multiethnic workplaces, utilising the ROS4HRI framework and the OfficeBots simulation environment.
+
+## System Requirements
+
+This software is designed to work on the following system environment:
+
+- Ubuntu 20.04
+- ROS Noetic
+
+Please ensure that your system meets these requirements before you continue.
+
+## Dependencies and Installation
+
+This software requires the following dependencies:
+
+- [ROS Noetic](https://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment)
+- PostgreSQL
+- Node.js
+- python3-websockets
+- python3-opencv
+- ros-noetic-cv-bridge
+- ros-noetic-hri-msgs
+- ros-noetic-sensor-msgs
+- ros-noetic-geometry-msgs
+- ros-noetic-nav-msgs
+- ros-noetic-hri
+- ros-noetic-pyhri
+- ros-noetic-human-description
+- ros-noetic-hri-rviz
+- rasa
+- officebots
+
+It is assumed that ROS-noetic, PostgreSQL, and Node.js have already been installed. If this is not the case, please refer to the following for details:
+
+- [ROS Noetic](https://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment)
+- [PostgreSQL](https://www.postgresql.org/download/linux/ubuntu/)
+- [Node.js](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
+
+You can install the other dependencies using the following commands:
+
+```bash
+sudo apt install python3-websockets python3-opencv ros-noetic-cv-bridge
+sudo apt install ros-noetic-hri-msgs ros-noetic-sensor-msgs ros-noetic-geometry-msgs ros-noetic-nav-msgs
+sudo apt install ros-noetic-hri ros-noetic-pyhri ros-noetic-human-description ros-noetic-hri-rviz
+pip3 install rasa
+pip3 install officebots
+```
+
+For python packages, you may also run `pip install -r requirements.txt` to install required python dependencies.
 
 ## Project Structure
 
 The project repository is structured as follows:
 
 ```bash
-├── .gitignore
 ├── rasa
 │ ├── hall
 │ │ ├── actions
@@ -20,27 +67,45 @@ The project repository is structured as follows:
 │ │ ├── endpoints.yml
 │ │ ├── models
 │ │ └── tests
+│ ├── jiaWen
+│ │ ├── actions
+│ │ ├── config.yml
+│ │ ├── credentials.yml
+│ │ ├── data
+│ │ ├── domain.yml
+│ │ ├── endpoints.yml
+│ │ ├── models
+│ │ └── tests
+│ ├── yuetNgor
+│ │ ├── actions
+│ │ ├── config.yml
+│ │ ├── credentials.yml
+│ │ ├── data
+│ │ ├── domain.yml
+│ │ ├── endpoints.yml
+│ │ ├── models
+│ │ └── tests
 ├── README.md
-└── scripts
-├── database
-│ ├── database_connection.py
-│ ├── database_factory.py
-│ └── pg_config.py
-├── html
-│ ├── public
-│ ├── server.js
-│ ├── survey1.html
-│ ├── survey2.html
-│ └── thankYou.html
-├── rasa
-│ └── run_rasa.py
-└── robot
-├── engagement.py
-├── officebots_ros.py
-├── robot_database_interface.py
-├── robot_factory.py
-├── robot.py
-└── simple_ros_bridge.py
+├── scripts
+│ │ ├── database
+│ │ │ ├── database_connection.py
+│ │ │ ├──  database_factory.py
+│ │ │ ├──  pg_config.py
+│ │ ├── html
+│ │ │ ├── public
+│ │ │ ├──  server.js
+│ │ │ ├──  survey1.html
+│ │ │ ├──  survey2.html
+│ │ │ ├──  thankYou.html
+│ │ ├── rasa
+│ │ │ ├── run_rasa.py
+│ │ ├── robot
+│ │ │ ├──  engagement.py
+│ │ │ ├──  officebots_ros.py
+│ │ │ ├── robot_database_interface.py
+│ │ │ ├── robot_factory.py
+│ │ │ ├──  robot.py
+│ │ │ ├── rasa_ros_bridge.py
 ```
 
 ## Components
@@ -48,6 +113,10 @@ The project repository is structured as follows:
 ### The Framework
 
 This Framework serves as the core of the project, providing tools and methodologies to examine the influence of cultural factors on HRI. It includes modules for data collection, analysis, and simulation of cultural interactions between humans and robots.
+
+### Current Version
+
+Currently, the framework focuses on nationality/national culture. Further development of the framework to accommodate other cultural aspects such as gender and race is appreciated and encouraged.
 
 ### Scripts
 
@@ -62,8 +131,8 @@ The `scripts` directory contains various Python and JavaScript scripts utilized 
 
 To utilize the CulturalBot Framework or replicate the research findings:
 
-1. Clone the repository: `git clone <repository_url>`
-2. Install dependencies: `pip install -r requirements.txt`
+1. Clone the repository
+2. Install dependencies
 3. Explore and modify the codebase as needed.
 4. Run simulations, experiments, or tests using the provided scripts.
 5. Document any changes or additions made to the project.
@@ -86,10 +155,10 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments and Related Projects
 
-This project utilizes the following frameworks and tools:
+This project utilises the following frameworks and tools:
 
 - [ROS4HRI](https://blog.pal-robotics.com/ros4hri-standardising-an-interface-for-human-robot-interaction/): ROS4HRI is a framework developed for standardizing interfaces for Human-Robot Interaction (HRI) within the Robot Operating System (ROS). It provides uniform interfaces and conventions, fostering code reusability and experiment replicability in HRI research.
 
 - [OfficeBots](https://blog.pal-robotics.com/ros4hri-standardising-an-interface-for-human-robot-interaction/): OfficeBots is a simulation environment developed for HRI research and education. It allows researchers to instantiate, customize, and control robotic avatars within a digital workspace, facilitating empirical studies on human-robot interactions.
 
-This project acknowledges the contributions of the developers and researchers behind ROS4HRI and OfficeBots for their valuable tools and resources that have enhanced the capabilities of this project.
+The contributions of the developers and researchers behind ROS4HRI and OfficeBots are highly appreciated, for their valuable tools and resources that have enhanced the capabilities of this CulturalHRI Framework.
