@@ -1,0 +1,35 @@
+@startuml
+
+package "CulturalHRI" {
+    package "database" {
+        [database_connection.py]
+        [database_factory.py]
+        [pg_config.py]
+    }
+
+    package "html" {
+        [public]
+        [server.js]
+        [survey1.html]
+        [survey2.html]
+        [thankYou.html]
+    }
+
+    package "robot" {
+        [robot_database_interface.py]
+        [engagement.py]
+        [officebots_ros.py]
+        [robot_factory.py]
+        [robot.py]
+        [simple_ros_bridge.py]
+    }
+
+    package "rasa" {
+        [run_rasa.py]
+    }
+}
+
+user --> html
+
+
+@enduml
