@@ -1,0 +1,49 @@
+@startuml
+
+class "database.database_factory.DatabaseFactory" {
+    - config: Config
+    + set_config(new_config: Config)
+    + create_connection(): Connection
+}
+
+class "robot.robot_factory.RobotFactory" {
+    - identification_type: String
+    + __init__(identification_type: String)
+    + get_identification(): String
+    + create_robot(): Robot
+}
+
+class "database.database_factory.PostgresConnectionFactory" {
+    + get_connection(): Connection
+}
+
+class "robot.robot_factory.CulturalRobotFactory" {
+    + create_robot(identification: String): Robot
+}
+
+class "robot.robot" {
+    - robot_number: Integer
+    + __init__(node_name: String, reference_frame: String)
+    + set_parameters()
+    + create_publisher(topic: String, msg_type: Type, pub_name: String)
+    + create_subscriber(topic: String, msg_type: Type, callback: Function, sub_name: String)
+    + scan_callback(msg: LaserScan)
+    + action_callback(msg: String)
+    + destination_callback(msg: String)
+    + odom_callback(msg: Odometry)
+}
+
+class "database.Database" {
+    + connect()
+    + query()
+    + insert()
+    + update()
+    + delete()
+}
+
+RobotFactory --> CulturalRobotFactory : creates
+DatabaseFactory --> PostgresConnectionFactory : creates
+RobotFactory --> robot.robot : creates
+DatabaseFactory --> Database : creates
+
+@enduml

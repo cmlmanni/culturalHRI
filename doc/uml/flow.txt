@@ -1,0 +1,19 @@
+@startuml
+
+start
+:User Input;
+if (Input Received?) then (yes)
+    :HTML Server;
+    :Database;
+    :Robot Database Interface;
+    :Robot Factory;
+  fork
+    :Robot Class;
+  fork again
+    :run_rasa;
+  endfork
+  :Rasa ROS Bridge;
+  :ROS Bridge;
+endif
+
+@enduml
