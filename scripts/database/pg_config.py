@@ -1,3 +1,4 @@
+# pg_config.py
 import os
 
 # Postgres Database configuration

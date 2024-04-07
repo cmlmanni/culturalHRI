@@ -1,3 +1,6 @@
+# database_factory.py
+# Define an abstract base class for a database connection and a concrete class for database connection.
+
 from abc import ABC, abstractmethod
 import psycopg2
 from psycopg2.extras import DictCursor
