@@ -1,5 +1,11 @@
 @startuml
 
+class "html.server" {
+    + get(path: String, callback: Function)
+    + post(path: String, callback: Function)
+    + listen(port: Number, callback: Function)
+}
+
 class "database.database_connection" {
     + get_connection(new_config: Config): Connection
 }
@@ -12,12 +18,6 @@ class "database.database_factory.PostgresConnectionFactory" {
 
 class "database.pg_config" {
     - DB_CONFIG: Config
-}
-
-class "html.server" {
-    + get(path: String, callback: Function)
-    + post(path: String, callback: Function)
-    + listen(port: Number, callback: Function)
 }
 
 class "rasa.run_rasa" {
@@ -67,6 +67,7 @@ class "robot.rasa_ros_bridge" {
 }
 
 html.server --> database.database_connection : passes data
+database.database_factory.PostgresConnectionFactory --> database.database_connection : uses
 database.database_factory.PostgresConnectionFactory --> database.pg_config : uses
 robot.robot_database_interface --> database.database_connection : connects to
 robot.robot_factory --> robot.robot_database_interface : uses
