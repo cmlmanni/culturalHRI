@@ -1,91 +1,206 @@
 version: "3.1"
 
 nlu:
+- intent: start
+  examples: |
+    - 开始  
+
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - 嘿
+    - 你好
+    - 嗨
+    - 你好啊
+    - 早上好
+    - 晚上好
+    - 嘿，你好
+    - 我们走吧
+    - 嘿，伙计
+    - 早安
+    - 晚安
+    - 下午好
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - 再见
+    - 待会见
+    - 拜拜
+    - 再见
+    - 祝你有美好的一天
+    - 待会见
+    - 拜拜
+    - 待会儿见
 
 - intent: affirm
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - 是的
+    - 对
+    - 确实
+    - 当然
+    - 听起来不错
+    - 对的
 
 - intent: deny
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - 不是
+    - 不
+    - 从来没有
+    - 我不这么认为
+    - 我不喜欢那个
+    - 不可能
+    - 不真的
+
+- intent: appreciation
+  examples: |
+    - 谢谢
+    - 非常感谢
+    - 非常感谢你
+    - 多谢
+    - 非常感谢你
+    - 非常感谢
+    - 非常感谢你
+    - 感谢一百万
+    - 非常感谢你
 
 - intent: mood_great
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - 完美
+    - 很好
+    - 惊人
+    - 感觉像国王
+    - 美妙
+    - 我感觉非常好
+    - 我很好
+    - 我很棒
+    - 我要拯救世界
+    - 超级兴奋
+    - 非常好
+    - 非常完美
+    - 非常好
+    - 非常完美
 
 - intent: mood_unhappy
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - 我的一天很糟糕
+    - 我很伤心
+    - 我感觉不太好
+    - 我很失望
+    - 超级伤心
+    - 我很伤心
+    - 伤心
+    - 非常伤心
+    - 不开心
+    - 不好
+    - 不太好
+    - 非常伤心
+    - 非常伤心
+    - 非常伤心
 
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - 你是机器人吗？
+    - 你是英国人吗？
+    - 你是人类吗？
+    - 我在和机器人说话吗？
+    - 我在和人说话吗？
+
+- intent: go_to
+  examples: |
+    - 去 [入口](location)
+    - 去 [厨房](location)
+    - 我希望你去 [餐厅](location)
+    - 你能去 [休息室](location) 吗？
+    - 你能去 [会议室](location) 吗？
+    - 请去 [接待处](location)
+    - 我需要你在 [会议室](location)
+    - 你能去 [休息室](location) 吗？
+    - 请去 [经理办公室](location)
+    - 你能去 [工作站区域](location) 吗？
+    - 请去 [停车场](location)
+    - 我希望你去 [洗手间](location)
+    - 你能去 [服务器房间](location) 吗？
+    - 请去 [厨房](location)
+    - 你能去 [屋顶](location) 吗？
+    - 请去 [花园](location)
+
+- intent: drink_preference
+  examples: |
+    - 我可以要一杯[咖啡](drink)吗？
+    - 我想要一杯[茶](drink)，谢谢。
+    - 我可以要一杯[啤酒](drink)吗？
+    - 我要一杯[葡萄酒](drink)。
+    - 我可以要一杯[汽水](drink)吗？
+    - 我想要一杯[果汁](drink)。
+    - 我可以要一杯[水](drink)吗，谢谢？
+    - 我想要一杯[奶昔](drink)。
+    - 我可以要一杯[果昔](drink)吗？
+    - 我要一杯[鸡尾酒](drink)，谢谢。
+    - 我可以要一杯[威士忌](drink)吗？
+    - 我想要一杯[伏特加](drink)，谢谢。
+    - 我可以要一杯[朗姆酒](drink)吗？
+    - 我想要一杯[金酒](drink)。
+    - 我可以要一杯[香槟](drink)吗？
+
+- intent: user_ask_robot_to_follow
+  examples: |
+    - 你能跟着我吗？
+    - 跟着我
+    - 请跟着我
+    - 你能跟着我吗，谢谢？
+    - 你能跟着我吗，谢谢
+    - 你能跟着我吗
+    - 跟着我，谢谢
+    - 请跟着我
+    - 跟着我，谢谢
+
+- intent: user_ask_robot_to_stay
+  examples: |
+    - 你能在这里待着吗？
+    - 在这里待着
+    - 请在这里待着
+    - 你能在这里待着吗，谢谢？
+    - 你能在这里待着吗，谢谢
+    - 你能在这里待着吗
+    - 在这里待着，谢谢
+    - 请在这里待着
+    - 在这里待着，谢谢
+    - 不要跟着我
+    - 请不要跟着我
+    - 不要跟着我，谢谢
+
+- intent: ask_for_venue_availability
+  examples: |
+    - [会议室](location)有空吗？
+    - 我可以预定[会议室](location)吗？
+    - 谁在[游戏室](location)？
+    - [健身房](location)什么时候有空？
+
+- intent: user_wants_drink
+  examples: |
+    - 我想要一杯饮料
+    - 我可以要一杯饮料吗？
+    - 我渴了
+    - 你们有饮料吗？
+    - 是的，请给我一杯饮料
+    - 我想要一杯饮料，谢谢
+    - 是的，谢谢
+    - 我渴了，我可以要一杯饮料吗？
+    - 来一杯饮料就好了
+
+- intent: user_follow_robot
+  examples: |
+    - 我会跟着你
+    - 我们去食品储藏室吧
+    - 我会和你一起去
+
+- intent: user_stay
+  examples: |
+    - 我会在这里待着
+    - 我更喜欢待在这里
+    - 我不想移动
+    
+- intent: action_completed_story
+  examples: |
+    - Action completed: A Nice cuppa for you! Enjoy!
+    - Action completed: Task done!
+    - Action completed: Job finished!

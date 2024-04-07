@@ -5,29 +5,110 @@ intents:
   - goodbye
   - affirm
   - deny
+  - appreciation
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - go_to
+  - user_follow_robot
+  - user_stay
+  - user_wants_drink
+  - user_ask_robot_to_follow
+  - user_ask_robot_to_stay
+  - action_completed_story
+  - utter_message
+  - drink_preference
+  - ask_for_venue_availability
 
+
+entities:
+  - location
+  - drink
+
+slots:
+  location:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: location
+  drink:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: drink
+      
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "你好！你今天过得怎么样？"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "这是一点东西让你振奋起来："
 
   utter_did_that_help:
-  - text: "Did that help you?"
+  - text: "那有帮助吗？"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "太好了，继续加油！"
 
   utter_goodbye:
-  - text: "Bye"
-
+  - text: "再见！"
+    
+  utter_cheers:
+  - text: "干杯！"
+    
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "我是一个有中国的机器人，伙计。"
+
+  utter_go:
+  - text: "好的，我现在就去{location}。"
+
+  utter_follow_user:
+  - text: "好的，我可以跟在你后面。"
+
+  utter_not_follow_user:
+  - text: "好的，我就待在这里。"
+
+  utter_ask_follow:
+  - text: "我可以跟着你走吗？"
+    
+  utter_123:
+  - text: "一，二，三！"
+
+  action_offer_tea:
+  - text: "你好！想来杯茶吗？"
+      
+  action_completed:
+  - text: "我已经完成任务了。"
+
+  utter_message:
+  - text: "给你一杯好茶！享受吧！"
+    
+  utter_ask_drink_preference:
+  - text: "你想喝什么饮料？"
+  
+  utter_confirm_drink_preference:
+  - text: "好的，我去给你拿{drink}。请稍等一下，我马上回来。"
+
+  utter_offer_tea:
+  - text: "好的，我可以给你泡一杯茶。请稍等一下，我马上回来。"
+
+  utter_check_venue_availability:
+  - text: "让我来为你检查一下。请稍等一下。"
+    
+actions:
+  - action_check_meeting_room_availability
+  - action_schedule_meeting
+  - action_find_employee
+  - action_report_issue
+  - action_order_supplies
+  - action_go_to
+  - action_follow
+  - action_do_not_follow
+  - action_offer_drink
+  - action_ask_follow_to_pantry
+  - action_greet_user
+  - action_lead_to_pantry
+  - action_stay_and_prepare_drink
 
 session_config:
   session_expiration_time: 60
