@@ -27,7 +27,7 @@ def run_rasa(robot_number):
         # Check if the robot number is valid
         if robot_number in robots:
             rospy.logwarn("Starting Rasa for robot number: %s %s" %(robot_number, robots[robot_number]))            # Run Rasa for the given robot number
-            command = f"rasa shell -m {os.path.join(os.path.expanduser('~/rasa/'), robots[robot_number], 'models')} --endpoints {os.path.join(os.path.expanduser('~/rasa/'), robots[robot_number], 'endpoints.yml')}"
+            command = f"rasa shell -m {os.path.join(os.path.expanduser('rasa/'), robots[robot_number], 'models')} --endpoints {os.path.join(os.path.expanduser('rasa/'), robots[robot_number], 'endpoints.yml')}"
             subprocess.Popen(["gnome-terminal", "--", "/bin/bash", "-c", command])
         else:
             print(f"Invalid robot number: {robot_number}")
