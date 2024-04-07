@@ -1,3 +1,6 @@
 scripts/database/__pycache__/
 scripts/rasa/__pycache__/
 scripts/robot/__pycache__/
+rasa/jiaWen/actions/__pycache__/
+rasa/hall/actions/__pycache__/
+rasa/yuetNgor/actions/__pycache__/
