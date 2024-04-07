@@ -142,10 +142,11 @@ To utilize the CulturalHRI Framework or replicate the research findings:
 5. Document any changes or additions made to the project.
 
 To run the software packages, first start the [OfficeBots](https://github.com/severin-lemaignan/officebots) game, and then run the following commands in seperate terminals:
-`roscore`
-`python3 -m scripts.robot.robot`
-`python3 -m scripts.robot.rasa_ros_bridge`
-`python3 -m scripts.robot.officebots_ros [Robot Name]`
+
+- `roscore`
+- `python3 -m scripts.robot.robot`
+- `python3 -m scripts.robot.rasa_ros_bridge`
+- `python3 -m scripts.robot.officebots_ros [Robot Name]`
 
 If you need further assistance on how to interact with the robot, please refer to the [OfficeBots GitHub Page](https://github.com/severin-lemaignan/officebots).
 
