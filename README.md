@@ -7,7 +7,8 @@ This framework is a research-based software engineering project aimed at explori
 ## Project Structure
 
 The project repository is structured as follows:
-.
+
+```bash
 ├── .gitignore
 ├── rasa
 │ ├── hall
@@ -40,6 +41,7 @@ The project repository is structured as follows:
 ├── robot_factory.py
 ├── robot.py
 └── simple_ros_bridge.py
+```
 
 ## Components
 
