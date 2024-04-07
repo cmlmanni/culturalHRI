@@ -20,7 +20,6 @@ intents:
   - drink_preference
   - ask_for_venue_availability
 
-  
 entities:
   - location
   - drink
@@ -75,7 +74,6 @@ responses:
   - text: "One, two, three!"
 
   action_offer_tea:
-  # - text: "Hello! Fancy a brew?"
     - text: "Hello! Fancy a cuppa?"
       
   action_completed:
@@ -113,7 +111,7 @@ actions:
   - utter_offer_tea
   - action_offer_drink
   - action_welcome_message
-  - 
+  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
