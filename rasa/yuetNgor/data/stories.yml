@@ -2,29 +2,69 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: asked to follow user
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - intent: user_ask_robot_to_follow
+  - action: utter_follow_user
+  - action: action_follow
+    
+- story: asked not to follow user
+  steps:
+  - intent: user_ask_robot_to_stay
+  - action: utter_not_follow_user    
+  - action: action_do_not_follow
 
-- story: sad path 1
+- story: go somewhere
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: go_to
+    entities:
+    - location
+  - action: utter_go
+  - action: action_go_to
 
-- story: sad path 2
+- story: ask for meeting room availability
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - intent: ask_for_venue_availability
+  - action: utter_check_venue_availability
+    
+- story: user asks for a drink
+  steps:
+  - intent: user_wants_drink
+  - action: utter_offer_tea
+  - action: action_offer_drink
+  - checkpoint: user_drink_preference
+
+- story: user wants other drink
+  steps:
+  - checkpoint: user_drink_preference
   - intent: deny
-  - action: utter_goodbye
+  - action: utter_ask_drink_preference
+  - intent: drink_preference
+    entities:
+    - drink
+  - action: utter_confirm_drink_preference
+  - action: action_offer_drink
+
+- story: user decides to follow
+  steps:
+  - checkpoint: user_decision
+  - intent: user_follow_robot
+  - action: action_lead_to_pantry
+
+- story: user decides to stay
+  steps:
+  - checkpoint: user_decision
+  - intent: user_stay
+  - action: action_stay_and_prepare_drink
+    
+- story: action completed story
+  steps:
+  - intent: action_completed_story
+  - action: utter_message
+    
+- story: user thanks robot
+  steps:
+  - intent: appreciation 
+  - action: utter_cheers

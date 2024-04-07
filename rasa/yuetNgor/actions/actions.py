@@ -25,3 +25,23 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
+
+from rasa_sdk import Action
+
+class ActionUtterMessage(Action):
+    def name(self):
+        return "utter_123"
+
+    async def run(self, dispatcher, tracker, domain):
+        # Here you would add the code to determine the message based on the completed action
+        # For this example, let's assume the message is "Action completed"
+        message = "Action completed"
+        dispatcher.utter_message(text=message)
+
+class ActionWelcomeMessage(Action):
+    def name(self):
+        return "action_welcome_message"
+
+    async def run(self, dispatcher, tracker, domain):
+        message = "Welcome! How can I assist you today?"
+        dispatcher.utter_message(text=message)

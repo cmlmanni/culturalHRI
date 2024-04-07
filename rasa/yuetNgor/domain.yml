@@ -5,30 +5,114 @@ intents:
   - goodbye
   - affirm
   - deny
+  - appreciation
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - go_to
+  - user_follow_robot
+  - user_stay
+  - user_wants_drink
+  - user_ask_robot_to_follow
+  - user_ask_robot_to_stay
+  - action_completed_story
+  - utter_message
+  - drink_preference
+  - ask_for_venue_availability
+
+entities:
+  - location
+  - drink
+
+slots:
+  location:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: location
+  drink:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: drink
+      responses:
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "你好！你過得如何？"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "來點東西讓你振奮一下："
 
   utter_did_that_help:
-  - text: "Did that help you?"
+  - text: "那有幫助嗎？"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "很好，繼續加油！"
+
+  utter_cheers:
+  - text: "乾杯！"
+    
+  utter_iamabot:
+  - text: "我是一個有英國口音的機器人，夥伴。"
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "Byebye!"
+      
+  utter_go:
+  - text: "好的，我現在就去{location}。"
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_follow_user:
+  - text: "當然，我可以跟在你後面。"
 
+  utter_not_follow_user:
+  - text: "好的，我就留在這裡。"
+
+  utter_ask_follow:
+  - text: "我可以跟你一起去嗎？"
+    
+  utter_123:
+  - text: "一、二、三！"
+
+  action_offer_tea:
+  - text: "你好！想來杯茶嗎？"
+      
+  action_completed:
+  - text: "我已經完成任務了。"
+
+  utter_message:
+  - text: "一杯好茶給你！享受吧！"
+    
+  utter_ask_drink_preference:
+  - text: "你想喝什麼飲料？"
+
+  utter_confirm_drink_preference:
+  - text: "好的，我可以為你拿一杯{drink}。稍等一下，我馬上回來給你飲料。"
+
+  utter_offer_tea:
+  - text: "當然，我可以為你泡一杯茶。請稍等一下，我馬上回來給你飲料。"
+
+  utter_check_venue_availability:
+  - text: "讓我為你檢查一下。請稍等一下。"
+    
+actions:
+  - action_go_to
+  - action_follow
+  - action_do_not_follow
+  - action_offer_tea
+  - action_ask_follow_to_pantry
+  - action_greet_user
+  - action_lead_to_pantry
+  - action_stay_and_prepare_drink
+  - action_completed
+  - utter_message
+  - utter_123
+  - utter_ask_drink_preference
+  - utter_confirm_drink_preference
+  - utter_offer_tea
+  - action_offer_drink
+  - action_welcome_message
+  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

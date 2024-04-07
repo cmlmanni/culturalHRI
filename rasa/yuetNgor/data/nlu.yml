@@ -1,91 +1,192 @@
-version: "3.1"
-
 nlu:
+- intent: start
+  examples: |
+    - 開始  
+
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - 喂
+    - 你好
+    - 哈囉
+    - 你好嗎
+    - 早晨
+    - 晚安
+    - 喂
+    - 喂你好
+    - 我哋開始啦
+    - 喂朋友
+    - 早晨
+    - 晚上好
+    - 下午好
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - 再見
+    - 拜拜
+    - 下次見
+    - 晚安
+    - 一路順風
+    - 祝你有美好的一天
+    - 下次再見
+    - 拜拜
+    - 待會見
 
 - intent: affirm
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - 係
+    - 對
+    - 確實
+    - 當然
+    - 聽起來唔錯
+    - 正確
 
 - intent: deny
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - 唔係
+    - 唔
+    - 絕不
+    - 我唔同意
+    - 我唔鍾意嗰個
+    - 唔可能
+    - 唔太對
+
+- intent: appreciation
+  examples: |
+    - 多謝
+    - 多謝你
+    - 非常感謝你
+    - 多謝
+    - 多謝你
+    - 多謝你嘅幫助
+    - 萬分感謝
+    - 多謝你
+    - 多謝你百分之百
+    - 多謝你一億
 
 - intent: mood_great
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - 完美
+    - 好好
+    - 非常好
+    - 感覺好好
+    - 美好
+    - 我感覺好好
+    - 我好好
+    - 我好棒
+    - 我要拯救世界
+    - 非常興奮
+    - 非常好
+    - 非常完美
+    - 好好
+    - 完美
 
 - intent: mood_unhappy
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - 我嘅一日好差
+    - 我好難過
+    - 我感覺唔太好
+    - 我好失望
+    - 非常難過
+    - 我好難過
+    - 難過
+    - 非常難過
+    - 唔開心
+    - 唔好
+    - 唔太好
+    - 非常難過
+    - 非常難過
+    - 好難過
 
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - 你係機械人嗎？
+    - 你係香港人嗎？
+    - 你係人類嗎？
+    - 我係同機械人講嘢嗎？
+    - 我係同人類講嘢嗎？
+
+- intent: go_to
+  examples: |
+    - 去[入口](location)
+    - 去[廚房](location)
+    - 我希望你能去[餐廳](location)
+    - 你能去[休息室](location)嗎？
+    - 你能去[會議室](location)嗎？
+    - 請去[接待處](location)
+    - 我需要你在[會議室](location)
+    - 你能去[pantry]](location)嗎？
+    - 請去[經理辦公室](location)
+    - 你能去[entrance](location)嗎？
+    - 請去[停車場](location)
+    - 我希望你能去[洗手間](location)
+    - 你能去[伺服器房間](location)嗎？
+    - 你能去[屋頂](location)嗎？
+    - 請去[花園](location)
+
+- intent: drink_preference
+  examples: |
+    - 我可以要一杯[咖啡](drink)嗎？
+    - 我想要一杯[茶](drink)。
+    - 我可以要一杯[啤酒](drink)嗎？
+    - 我要一杯[葡萄酒](drink)。
+    - 我可以要一杯[汽水](drink)嗎？
+    - 我想要一杯[果汁](drink)。
+    - 我可以要一杯[水](drink)嗎？
+    - 我想要一杯[奶昔](drink)。
+    - 我可以要一杯[冰沙](drink)嗎？
+    - 我要一杯[雞尾酒](drink)。
+    - 我可以要一杯[威士忌](drink)嗎？
+    - 我想要一杯[伏特加](drink)。
+    - 我可以要一杯[朗姆酒](drink)嗎？
+    - 我想要一杯[琴酒](drink)。
+    - 我可以要一杯[香檳](drink)嗎？
+
+- intent: user_ask_robot_to_follow
+  examples: |
+    - 你可以跟住我嗎？
+    - 跟住我
+    - 請跟住我
+
+- intent: user_ask_robot_to_stay
+  examples: |
+    - 你可以留喺呢度嗎？
+    - 留喺呢度
+    - 請留喺呢度
+    - 唔好跟住我
+    - 請唔好跟住我
+
+- intent: ask_for_venue_availability
+  examples: |
+    - [會議室](location)有冇人？
+    - 我可以預訂[會議室](location)嗎？
+    - [健身房](location)幾時有空？
+
+- intent: user_wants_drink
+  examples: |
+    - 我想要一杯飲品
+    - 我可以要一杯飲品嗎？
+    - 我口渴
+    - 你有冇飲品？
+    - 係，我想要一杯飲品
+    - 我想要一杯飲品，多謝
+    - 係，請俾一杯飲品我
+    - 我口渴，我可以要一杯飲品嗎？
+    - 一杯飲品會好好
+
+- intent: user_follow_robot
+  examples: |
+    - 我會跟住你
+    - 我哋去廚房啦
+    - 我會跟你走
+
+- intent: user_stay
+  examples: |
+    - 我會留喺呢度
+    - 我更鍾意留喺呢度
+    - 我唔想移動
+
+- intent: action_completed_story
+  examples: |
+    - 行動完成：一杯好茶俾你！享受吧！
+    - 行動完成：任務完成！
+    - 行動完成：工作完成！
