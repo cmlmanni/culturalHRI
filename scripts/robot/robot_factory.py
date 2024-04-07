@@ -13,3 +13,13 @@ class RobotFactory:
             pass
         else:
             raise ValueError(f"Unsupported identification type: {self.identification_type}")
+
+    def create_robot(self, robot_number):
+        if robot_number == 1:
+            return 1
+        elif robot_number == 2:
+            return 2
+        elif robot_number == 3:
+            return 3
+        else:
+            raise ValueError(f"Unsupported robot type: {robot_type}")

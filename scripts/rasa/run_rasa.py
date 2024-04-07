@@ -13,8 +13,8 @@ def is_process_running(process_name):
             return True
     return False
 
-def run_rasa():
-    robot_number = get_robot_number()
+def run_rasa(robot_number):
+    # robot_number = robot_number
 
     if not is_process_running('rasa'):
         # Map robot numbers to model paths
