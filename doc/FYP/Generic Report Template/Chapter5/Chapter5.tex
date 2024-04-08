@@ -18,12 +18,12 @@ OfficeBots emerges as an innovative tool to facilitate HRI research, manifesting
 
 \section{Architecture}
 
-The system architecture is structured as a multi-tiered framework, where each layer fulfills distinct functions and interacts through well defined interfaces:
+The system architecture is structured as a multi-tiered framework, where each layer fulfils distinct functions and interacts through well defined interfaces:
 
 \begin{itemize}
     \item \textbf{ROS Core:} Serving as the fundamental communication medium, ROS facilitates message passing between nodes and manages services and actions within the robotic environment.
     \item \textbf{ROS4HRI:} Extending core ROS functionalities, ROS4HRI introduces dedicated nodes and topics for human-robot interaction capabilities, enriching the system with features like motion tracking and body movement detection.
-    \item \textbf{Culturally Aware Extensions:} These custom nodes and services, developed atop ROS and ROS4HRI, imbue robotic behaviors with cultural awareness. They enable adaptations based on participant input regarding nationality and cultural preferences. Notably, the implementation integrates the factory pattern, anticipating future extensions to explore additional cultural values such as race and gender.
+    \item \textbf{Culturally Aware Extensions:} These custom nodes and services, developed atop ROS and ROS4HRI, imbue robotic behaviours with cultural awareness. They enable adaptations based on participant input regarding nationality and cultural preferences. Notably, the implementation integrates the factory pattern, anticipating future extensions to explore additional cultural values such as race and gender.
 \end{itemize}
 
 \subsection{Factory Pattern}
@@ -59,9 +59,9 @@ By employing the factory pattern in this project, the framework enables easy man
 To fulfil its functional and experimental objectives, the project harnesses a diverse array of programming languages and software stacks:
 
 \begin{itemize}
-    \item \textbf{Python:} Primarily utilized for ROS node development, Python defines robot behaviors through subscribers and publishers. Additionally, it integrates with RASA Conversational AI for natural language interactions and Flask web framework for HTTP request handling and survey data processing.
+    \item \textbf{Python:} Primarily utilized for ROS node development, Python defines robot behaviours through subscribers and publishers. Additionally, it integrates with RASA Conversational AI for natural language interactions and Flask web framework for HTTP request handling and survey data processing.
     \item \textbf{JavaScript:} Drives frontend development for surveys, facilitating a dynamic user interface, and is utilized on the backend for data collection and relay to the Flask server and robotic framework.
-    \item \textbf{SQL:} Employed to structure the Postgres database schema storing survey data essential for configuring robot behaviors aligned with cultural contexts.
+    \item \textbf{SQL:} Employed to structure the Postgres database schema storing survey data essential for configuring robot behaviours aligned with cultural contexts.
     \item \textbf{C\#:} Powers the OfficeBots environment within the GoDot game engine, enabling high-fidelity simulation for HRI studies and implementing multilingual support for cultural interaction within the simulation.
 \end{itemize}
 
@@ -72,7 +72,7 @@ The project's integration strategy ensures smooth communication between the surv
 \begin{itemize}
     \item \textbf{Data Flow:} Survey responses collected via the JavaScript frontend are stored in the Postgres database. SQL queries retrieve this data, which is then passed through the Flask interface to ROS, facilitating the translation of survey responses into robotic actions.
     \item \textbf{ROS Bridge:} Serving as the conduit between web-based components (Flask server) and ROS/ROS4HRI systems, the ROS Bridge facilitates seamless communication.
-    \item \textbf{Simulation Interaction:} C\# scripts within the GoDot game engine translate transmitted data into live changes, updating robot behavior in the OfficeBots environment to reflect cultural adaptations.
+    \item \textbf{Simulation Interaction:} C\# scripts within the GoDot game engine translate transmitted data into live changes, updating robot behaviour in the OfficeBots environment to reflect cultural adaptations.
 \end{itemize}
 
 \begin{figure}
@@ -101,7 +101,7 @@ In the testing phase, unit tests were conducted for individual functions and cla
 
 \subsection{Unit Testing}
 
-The database module comprises scripts responsible for managing database connections and configurations. Similarly, within the robot module, scripts oversee robotic engagement, interface with databases, and control robot behavior. Additionally, the rasa module contains scripts dedicated to running the Rasa conversational AI platform.
+The database module comprises scripts responsible for managing database connections and configurations. Similarly, within the robot module, scripts oversee robotic engagement, interface with databases, and control robot behaviour. Additionally, the rasa module contains scripts dedicated to running the Rasa conversational AI platform.
 
 The factory pattern plays a crucial role within the robot and database modules. For instance, the \texttt{RobotFactory} class in the \texttt{robot\_factory.py} script facilitates the creation of various types of robots, while the \texttt{DatabaseFactory} class in the \texttt{database\_factory.py} script enables the creation of different database connections.
 
@@ -113,7 +113,7 @@ The versatility of the factory pattern was demonstrated by simulating scenarios 
 
 This exercise showcased the potential benefits of the factory pattern for future extension experiments. By allowing for the dynamic creation of objects without specifying their exact class, the factory pattern is well-suited for accommodating new types of robots or database connections as the framework evolves. This capability becomes particularly valuable in the context of cultural adaptation in Human-Robot Interaction (HRI) experiments.
 
-In future experiments exploring gender-specific or race-specific robot behaviors, the factory pattern can facilitate the seamless integration of new, non-implemented classes such as \texttt{GenderRobot} and \texttt{RaceRobot}. This allows researchers to easily extend the framework to incorporate culturally sensitive interactions tailored to specific gender or race identities.
+In future experiments exploring gender-specific or race-specific robot behaviours, the factory pattern can facilitate the seamless integration of new, non-implemented classes such as \texttt{GenderRobot} and \texttt{RaceRobot}. This allows researchers to easily extend the framework to incorporate culturally sensitive interactions tailored to specific gender or race identities.
 
 \subsection{Integration Testing}
 

@@ -2,12 +2,18 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Robot configured according to user input}}{10}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces An example of Chinese robot behaviour}}{11}{figure.4.2}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces System Architecture of the Culturally Aware Robotic Framework.}}{14}{figure.5.1}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Factory Pattern Implementation in the Framework for easy extension and customisation.}}{14}{figure.5.2}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Data Flow and Communication between the Survey Interface, Database, and Robot Class.}}{16}{figure.5.3}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces System Architecture of the Culturally Aware Robotic Framework.}}{16}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Factory Pattern Implementation in the Framework for easy extension and customisation.}}{16}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Data Flow and Communication between the Survey Interface, Database, and Robot Class.}}{18}{figure.5.3}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {11.1}{\ignorespaces Sample Consent Form.}}{34}{figure.11.1}%
+\contentsline {figure}{\numberline {11.2}{\ignorespaces Sample Pre-Experiment Survey Questions.}}{35}{figure.11.2}%
+\contentsline {figure}{\numberline {11.3}{\ignorespaces Sample Post-Experiment Survey Questions.}}{36}{figure.11.3}%
