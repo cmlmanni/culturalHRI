@@ -11,7 +11,7 @@ import json
 with open('scripts/robot/robot_parameters.json') as f:
     data = json.load(f)
 ROBOT_NUMBERS = data['robot_numbers']
-DEFAULT = "HK"
+DEFAULT = "GB"
 
 # Function to get an identification
 def get_identification():
