@@ -29,7 +29,5 @@ package "CulturalHRI" {
     }
 }
 
-user --> html
-
 
 @enduml
