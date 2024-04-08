@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2024)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: dissertation.aux
+The top-level auxiliary file: Dissertation.aux
 A level-1 auxiliary file: Preamble/Frontpage.aux
 A level-1 auxiliary file: Preamble/Abstract.aux
 A level-1 auxiliary file: Preamble/Acknowledge.aux
@@ -21,44 +21,44 @@ A level-1 auxiliary file: Chapter10/Chapter10.aux
 The style file: abbrv.bst
 A level-1 auxiliary file: Appendices/Appendices.aux
 Database file #1: bibliography.bib
-You've used 13 entries,
+You've used 14 entries,
             2118 wiz_defined-function locations,
-            594 strings with 6244 characters,
-and the built_in function-call counts, 4215 in all, are:
-= -- 391
-> -- 230
+            598 strings with 6339 characters,
+and the built_in function-call counts, 4430 in all, are:
+= -- 410
+> -- 237
 < -- 0
-+ -- 94
-- -- 78
-* -- 324
-:= -- 738
-add.period$ -- 38
-call.type$ -- 13
-change.case$ -- 77
++ -- 97
+- -- 80
+* -- 332
+:= -- 776
+add.period$ -- 41
+call.type$ -- 14
+change.case$ -- 80
 chr.to.int$ -- 0
-cite$ -- 13
-duplicate$ -- 140
-empty$ -- 318
-format.name$ -- 78
-if$ -- 843
+cite$ -- 14
+duplicate$ -- 152
+empty$ -- 340
+format.name$ -- 80
+if$ -- 889
 int.to.chr$ -- 0
-int.to.str$ -- 13
-missing$ -- 13
-newline$ -- 67
-num.names$ -- 26
-pop$ -- 71
+int.to.str$ -- 14
+missing$ -- 15
+newline$ -- 72
+num.names$ -- 28
+pop$ -- 79
 preamble$ -- 1
-purify$ -- 65
+purify$ -- 68
 quote$ -- 0
-skip$ -- 93
+skip$ -- 99
 stack$ -- 0
-substring$ -- 236
-swap$ -- 14
+substring$ -- 241
+swap$ -- 15
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 50
+type$ -- 52
 warning$ -- 0
-while$ -- 36
-width$ -- 15
-write$ -- 140
+while$ -- 38
+width$ -- 16
+write$ -- 150
