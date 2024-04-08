@@ -141,6 +141,9 @@ To utilize the CulturalHRI Framework or replicate the research findings:
 4. Run simulations, experiments, or tests using the provided scripts.
 5. Document any changes or additions made to the project.
 
+When conducting expeirment, you are required to set up to Node.js survey server with database connection:
+- `node server.js`
+
 To run the software packages, first start the [OfficeBots](https://github.com/severin-lemaignan/officebots) game, and then run the following commands in seperate terminals:
 
 - `roscore`

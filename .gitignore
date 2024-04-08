@@ -4,3 +4,13 @@ scripts/robot/__pycache__/
 rasa/jiaWen/actions/__pycache__/
 rasa/hall/actions/__pycache__/
 rasa/yuetNgor/actions/__pycache__/
+.DS_Store
+doc/.DS_Store
+doc/FYP/.DS_Store
+doc/FYP/Generic Report Template/.DS_Store
+doc/FYP/Generic Report Template/Appendices/.DS_Store
+doc/FYP/Generic Report Template/Chapter1/.DS_Store
+doc/FYP/Generic Report Template/Chapter10/.DS_Store
+doc/FYP/Generic Report Template/Chapter4/.DS_Store
+doc/FYP/Generic Report Template/Chapter5/.DS_Store
+doc/FYP/Generic Report Template/Preamble/.DS_Store
