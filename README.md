@@ -6,6 +6,9 @@
 
 This CulturalHRI framework is a research-based software engineering project aimed at exploring culturally adaptive human-robot interaction (HRI) within diverse office environments. The project focuses on simulating and studying greeting behaviours of robotic agents in multiethnic workplaces, utilising the ROS4HRI framework and the OfficeBots simulation environment.
 
+## Demo and Presentation Slides
+You may refer to the presentation slides(doc/Slide.pdf) for better understanding of the project. 
+
 ## System Requirements
 
 This software is designed to work on the following system environment:
