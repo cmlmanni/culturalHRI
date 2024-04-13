@@ -8,7 +8,6 @@ This CulturalHRI framework is a research-based software engineering project aime
 
 ## Demo and Presentation Slides
 - You may refer to the presentation [slides](doc/Slide.pdf) for better understanding of the project.
-- A demonstration [video](doc/Demo.mp4) is also included for demostration how the environment works.
 
 ## System Requirements
 
